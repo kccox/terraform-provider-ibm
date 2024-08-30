@@ -1,6 +1,6 @@
 # IBM Event Streams examples
 
-This example shows 3 usage scenarios.
+This example shows five usage scenarios.
 
 #### Scenario 1: Create an Event Streams service instance and topic.
 
@@ -107,6 +107,21 @@ resource "ibm_event_streams_schema" "es_schema" {
   SCHEMA
 }
 ```
+
+#### Scenario 5: Set the schema global compatibility rule on an existing Event Streams Enterprise instance
+
+```terraform
+data "ibm_resource_instance" "es_instance_5" {
+  name              = "terraform-integration-5"
+  resource_group_id = data.ibm_resource_group.group.id
+}
+
+resource "ibm_event_streams_schema_global_compatibility_rule" "es_schema_global_compatbility_rule" {
+  resource_instance_id = data.ibm_resource_instance.es_instance_4.id
+  config = "FORWARD"
+}
+```
+
 
 ## Dependencies
 
