@@ -178,7 +178,6 @@ An implementation of generated Ansible modules using the
 
 2. [Power Virtual Server Instance](examples/ansible/examples/simple-vm-power-vs/)
 
-
 [IBM Cloud Terraform Provider]: https://github.com/IBM-Cloud/terraform-provider-ibm
 [Python3]: https://www.python.org/downloads/
 [RedHat Ansible]: https://www.ansible.com/
